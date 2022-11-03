@@ -81,6 +81,20 @@ class MainActivity : AppCompatActivity() {
                     {
                         Toast.makeText(applicationContext, "Wpisz do pola nad przyciskiem, jaka liczbe chcesz dodac", length).show()
                     }
+                    butt_usun_ze_stosu.setOnClickListener {
+                        if (!stos.isEmpty())
+                        {
+                            val liczba = stos.last()
+                            Toast.makeText(applicationContext, "usunieto do stosu liczbe: " + liczba, length).show()
+                            stos.removeLast()
+                            ilosc_ele_w_stosie -= 1
+                            txt_ile_w_stosie.text = ilosc_ele_w_stosie.toString()
+                        }
+                        else
+                        {
+                            Toast.makeText(applicationContext, "Stos jest pusty", length).show()
+                        }
+                    }
 
                 }
             }
