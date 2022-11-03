@@ -185,14 +185,13 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="301dp"
         android:layout_marginRight="301dp"
-        android:layout_marginBottom="174dp"
         android:text="dodaj do stosu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.098"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ilosc2"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.327" />
 
     <Button
         android:id="@+id/usun_stos"
@@ -203,12 +202,13 @@
         android:layout_marginTop="21dp"
         android:layout_marginEnd="266dp"
         android:layout_marginRight="266dp"
-        android:layout_marginBottom="105dp"
         android:text="usun ze stosu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.724"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dodaj_stos" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.909" />
 
     <Button
         android:id="@+id/gora_stos"
@@ -219,14 +219,13 @@
         android:layout_marginTop="41dp"
         android:layout_marginEnd="289dp"
         android:layout_marginRight="289dp"
-        android:layout_marginBottom="16dp"
         android:text="element na gorze stosu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintHorizontal_bias="0.13"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/usun_stos"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/gorastos"
@@ -245,7 +244,7 @@
         app:layout_constraintTop_toBottomOf="@+id/ostatni_element" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/text_stos"
         android:layout_width="122dp"
         android:layout_height="51dp"
         android:layout_marginStart="110dp"
@@ -259,5 +258,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/dodaj_stos"
         app:layout_constraintTop_toBottomOf="@+id/gorastos" />
+
+    <EditText
+        android:id="@+id/dodaj_el_stos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Dodaj element stosu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.734" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

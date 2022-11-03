@@ -3,6 +3,7 @@ package com.example.stos_kolejka
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import java.util.LinkedList
@@ -55,6 +56,19 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(applicationContext, "Brak elementow  w kolejce", length).show()
                 txt_pierwszy_w_kolejce.text = "brak elementow w kolejce"
                 txt_ostatni_w_kolejce.text = "brak elementow w kolejce"
+
+
+
+                //----------------------------STOS-------------------------------//
+                val stos = LinkedList<Int>()
+                val butt_dodaj_do_stosu = findViewById<Button>(R.id.dodaj_stos)
+                val butt_usun_ze_stosu = findViewById<Button>(R.id.usun_stos)
+                val butt_pierw_ele_w_stosie = findViewById<Button>(R.id.gora_stos)
+                val edittext_dodaj_do_stosu = findViewById<EditText>(R.id.dodaj_el_stos)
+                val txt_ile_w_stosie = findViewById<TextView>(R.id.ilosc2)
+                val txt_gora_stosu = findViewById<TextView>(R.id.text_stos)
+                var ilosc_ele_w_stosie = 0
+
             }
         }
     }
