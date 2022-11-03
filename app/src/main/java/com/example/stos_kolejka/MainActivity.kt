@@ -30,6 +30,33 @@ class MainActivity : AppCompatActivity() {
             ilosc_kolejka += 1
             txt_ile_w_kolejce.text = ilosc_kolejka.toString()
         }
+        butt_usun_z_kolejki.setOnClickListener {
+            if (!kolejka.isEmpty()) {
+                Toast.makeText(
+                    applicationContext,
+                    "Usunieto numer: " + kolejka.element() + " z kolejki!",
+                    length
+                ).show()
+                kolejka.remove()
+                ilosc_kolejka -= 1
+                txt_ile_w_kolejce.text = ilosc_kolejka.toString()
+
+            } else {
+                Toast.makeText(applicationContext, "Brak osob w kolejce", length).show()
             }
         }
+        butt_pierw_i_ost_w_kolejce.setOnClickListener {
+            if (!kolejka.isEmpty()) {
+                val pierw = kolejka.element()
+                val ost = kolejka.last()
+                txt_pierwszy_w_kolejce.text = pierw.toString()
+                txt_ostatni_w_kolejce.text = ost.toString()
+            } else {
+                Toast.makeText(applicationContext, "Brak osob w kolejce", length).show()
+                txt_pierwszy_w_kolejce.text = "brak osob w kolejce"
+                txt_ostatni_w_kolejce.text = "brak osob w kolejce"
+            }
+        }
+    }
+}
 
