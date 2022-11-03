@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         var ilosc_kolejka = 0
 
         butt_dodaj_do_kolejki.setOnClickListener {
-            Toast.makeText(applicationContext, "Twój numer to: " + numer, length).show()
+            Toast.makeText(applicationContext, "Twój numer elementu  to: " + numer, length).show()
             kolejka.add(numer)
             numer += 1
             ilosc_kolejka += 1
@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
             if (!kolejka.isEmpty()) {
                 Toast.makeText(
                     applicationContext,
-                    "Usunieto numer: " + kolejka.element() + " z kolejki!",
+                    "Usunieto element: " + kolejka.element() + " z kolejki!",
                     length
                 ).show()
                 kolejka.remove()
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
                 txt_ile_w_kolejce.text = ilosc_kolejka.toString()
 
             } else {
-                Toast.makeText(applicationContext, "Brak osob w kolejce", length).show()
+                Toast.makeText(applicationContext, "Brak elementow w kolejce", length).show()
             }
         }
         butt_pierw_i_ost_w_kolejce.setOnClickListener {
@@ -52,9 +52,9 @@ class MainActivity : AppCompatActivity() {
                 txt_pierwszy_w_kolejce.text = pierw.toString()
                 txt_ostatni_w_kolejce.text = ost.toString()
             } else {
-                Toast.makeText(applicationContext, "Brak osob w kolejce", length).show()
-                txt_pierwszy_w_kolejce.text = "brak osob w kolejce"
-                txt_ostatni_w_kolejce.text = "brak osob w kolejce"
+                Toast.makeText(applicationContext, "Brak elementow  w kolejce", length).show()
+                txt_pierwszy_w_kolejce.text = "brak elementow w kolejce"
+                txt_ostatni_w_kolejce.text = "brak elementow w kolejce"
             }
         }
     }
