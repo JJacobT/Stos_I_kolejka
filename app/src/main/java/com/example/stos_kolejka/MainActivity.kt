@@ -69,6 +69,20 @@ class MainActivity : AppCompatActivity() {
                 val txt_gora_stosu = findViewById<TextView>(R.id.text_stos)
                 var ilosc_ele_w_stosie = 0
 
+                butt_dodaj_do_stosu.setOnClickListener {
+                    if(edittext_dodaj_do_stosu.text.toString() != "") {
+                        val liczba = edittext_dodaj_do_stosu.text.toString().toInt()
+                        Toast.makeText(applicationContext, "Dodano do stosu liczbe: " + liczba, length).show()
+                        stos.add(liczba)
+                        ilosc_ele_w_stosie += 1
+                        txt_ile_w_stosie.text = ilosc_ele_w_stosie.toString()
+                    }
+                    else
+                    {
+                        Toast.makeText(applicationContext, "Wpisz do pola nad przyciskiem, jaka liczbe chcesz dodac", length).show()
+                    }
+
+                }
             }
         }
     }
