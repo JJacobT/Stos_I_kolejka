@@ -261,16 +261,16 @@
 
     <EditText
         android:id="@+id/dodaj_el_stos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="231dp"
+        android:layout_height="79dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Dodaj element stosu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintHorizontal_bias="0.086"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.734" />
+        app:layout_constraintVertical_bias="0.726" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

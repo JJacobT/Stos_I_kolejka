@@ -58,7 +58,6 @@ class MainActivity : AppCompatActivity() {
                 txt_ostatni_w_kolejce.text = "brak elementow w kolejce"
 
 
-
                 //----------------------------STOS-------------------------------//
                 val stos = LinkedList<Int>()
                 val butt_dodaj_do_stosu = findViewById<Button>(R.id.dodaj_stos)
@@ -70,32 +69,50 @@ class MainActivity : AppCompatActivity() {
                 var ilosc_ele_w_stosie = 0
 
                 butt_dodaj_do_stosu.setOnClickListener {
-                    if(edittext_dodaj_do_stosu.text.toString() != "") {
+                    if (edittext_dodaj_do_stosu.text.toString() != "") {
                         val liczba = edittext_dodaj_do_stosu.text.toString().toInt()
-                        Toast.makeText(applicationContext, "Dodano do stosu liczbe: " + liczba, length).show()
+                        Toast.makeText(
+                            applicationContext,
+                            "Dodano do stosu liczbe: " + liczba,
+                            length
+                        ).show()
                         stos.add(liczba)
                         ilosc_ele_w_stosie += 1
                         txt_ile_w_stosie.text = ilosc_ele_w_stosie.toString()
-                    }
-                    else
-                    {
-                        Toast.makeText(applicationContext, "Wpisz do pola nad przyciskiem, jaka liczbe chcesz dodac", length).show()
-                    }
-                    butt_usun_ze_stosu.setOnClickListener {
-                        if (!stos.isEmpty())
-                        {
-                            val liczba = stos.last()
-                            Toast.makeText(applicationContext, "usunieto do stosu liczbe: " + liczba, length).show()
-                            stos.removeLast()
-                            ilosc_ele_w_stosie -= 1
-                            txt_ile_w_stosie.text = ilosc_ele_w_stosie.toString()
-                        }
-                        else
-                        {
-                            Toast.makeText(applicationContext, "Stos jest pusty", length).show()
-                        }
+                    } else {
+                        Toast.makeText(
+                            applicationContext,
+                            "Wpisz do pola nad przyciskiem, jaka liczbe chcesz dodac",
+                            length
+                        ).show()
                     }
 
+                }
+
+                butt_usun_ze_stosu.setOnClickListener {
+                    if (!stos.isEmpty()) {
+                        val liczba = stos.last()
+                        Toast.makeText(
+                            applicationContext,
+                            "usunieto do stosu liczbe: " + liczba,
+                            length
+                        ).show()
+                        stos.removeLast()
+                        ilosc_ele_w_stosie -= 1
+                        txt_ile_w_stosie.text = ilosc_ele_w_stosie.toString()
+                    } else {
+                        Toast.makeText(applicationContext, "Stos jest pusty", length).show()
+                    }
+                }
+                butt_pierw_ele_w_stosie.setOnClickListener {
+                    if (!stos.isEmpty()) {
+                        val liczba = stos.last()
+                        txt_gora_stosu.text = liczba.toString()
+
+                    } else {
+                        Toast.makeText(applicationContext, "Stos jest pusty", length).show()
+                        txt_gora_stosu.text = "Stos jest pusty"
+                    }
                 }
             }
         }
