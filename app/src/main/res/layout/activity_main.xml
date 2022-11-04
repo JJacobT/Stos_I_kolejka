@@ -14,12 +14,13 @@
         android:layout_marginLeft="28dp"
         android:layout_marginEnd="289dp"
         android:layout_marginRight="289dp"
-        android:layout_marginBottom="550dp"
         android:text="dodaj "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.219" />
 
     <TextView
         android:id="@+id/kolejka"
@@ -29,10 +30,10 @@
         android:text="Kolejka"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.528"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.037" />
+        app:layout_constraintVertical_bias="0.016" />
 
     <Button
         android:id="@+id/but_usun"
@@ -42,29 +43,25 @@
         android:layout_marginLeft="22dp"
         android:layout_marginEnd="178dp"
         android:layout_marginRight="178dp"
-        android:layout_marginBottom="548dp"
         android:text="usuń"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/but_dodaj" />
+        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintStart_toEndOf="@+id/but_dodaj"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.219" />
 
     <Button
         android:id="@+id/but_ostatniel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="289dp"
-        android:layout_marginRight="289dp"
-        android:layout_marginBottom="485dp"
         android:text="pokaż elementy"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.087"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/but_dodaj"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.326" />
 
     <TextView
         android:id="@+id/stos"
@@ -123,58 +120,43 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/kolejka"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.05" />
 
     <TextView
         android:id="@+id/ilosc"
         android:layout_width="31dp"
         android:layout_height="37dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="325dp"
-        android:layout_marginRight="325dp"
-        android:layout_marginBottom="16dp"
         android:text="0"
-        app:layout_constraintBottom_toTopOf="@+id/but_dodaj"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/elementy" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.086" />
 
     <TextView
         android:id="@+id/ilosc_stos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="155dp"
-        android:layout_marginEnd="323dp"
-        android:layout_marginRight="323dp"
-        android:layout_marginBottom="310dp"
         android:text="Ilosc elementow w stosie"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintHorizontal_bias="0.083"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/but_ostatniel"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.575" />
 
     <TextView
         android:id="@+id/ilosc2"
         android:layout_width="47dp"
         android:layout_height="53dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginLeft="34dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="320dp"
-        android:layout_marginRight="320dp"
         android:text="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.524"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ilosc_stos"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.592" />
 
     <Button
         android:id="@+id/dodaj_stos"
@@ -188,10 +170,10 @@
         android:text="dodaj do stosu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintHorizontal_bias="0.084"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ilosc2"
-        app:layout_constraintVertical_bias="0.327" />
+        app:layout_constraintVertical_bias="0.442" />
 
     <Button
         android:id="@+id/usun_stos"
@@ -253,24 +235,26 @@
         android:layout_marginEnd="63dp"
         android:layout_marginRight="63dp"
         android:layout_marginBottom="184dp"
-        android:text="TextView"
+        android:text="Element na gorze stosu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
         app:layout_constraintStart_toEndOf="@+id/dodaj_stos"
-        app:layout_constraintTop_toBottomOf="@+id/gorastos" />
+        app:layout_constraintTop_toBottomOf="@+id/gorastos"
+        app:layout_constraintVertical_bias="0.989" />
 
     <EditText
         android:id="@+id/dodaj_el_stos"
-        android:layout_width="231dp"
-        android:layout_height="79dp"
+        android:layout_width="227dp"
+        android:layout_height="71dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Dodaj element stosu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintHorizontal_bias="0.044"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.726" />
+        app:layout_constraintVertical_bias="0.733" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
